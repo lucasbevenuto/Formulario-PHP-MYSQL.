@@ -1,0 +1,20 @@
+show databases;
+create database ALUNO***;
+use aluno****;
+create table cadastro (
+	nomeCompleto varchar(50) not null,
+    email varchar(30) primary key not null,
+    telefone varchar(11) not null,
+    dataNasc date,
+    estadoCivil enum ("casado", "solteiro", "divorciado", "viuvo"),
+    sexo  CHAR(10) NOT NULL,
+    dataAgendamento date,
+    horarioAgendamento varchar(5),
+    doenca char(3),
+    fotoCarteirinha VARCHAR(30) DEFAULT "",
+    fotoRG VARCHAR(30) DEFAULT "",
+    carteirinha varchar(25),
+    descricao text
+);
+
+select * from cadastro;
