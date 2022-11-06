@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Consultório Clínico</title>
+    </head>
+    <body>
+        <form action="gravarDados.php" enctype="multipart/form-data" method="POST">
+            <h1>Clínica Melhoria</h1>
+            <hr>
+            <h2>Cadastro do paciente</h2>
+            <form action="gravarDados.php" method="post" enctype="multipart/form-data">
+        <p> <i>Preencha o formulário corretamente, para prosseguir com o agendamento da consulta.</i> </p>
+            <br> <br>
+            
+                <fieldset id="dadospaciente">
+                <legend>Dados do paciente</legend>
+                <br>
+                Nome Completo:<input placeholder="Jose silva fontes" type="text" name="nomeCompleto" required>
+                <br> <br>
+                E-mail:
+                <input placeholder="Josesilva@fontes.com" type="email" name="email" required>
+                <br> <br>
+                Telefone:
+                <input  placeholder="(xx) xxxx-xxxx" type="text" name="telefone" required>
+                <br> <br>
+                Data de nascimento:
+                <input type="date" name="dataNasc">
+                <br> <br>
+                Estado civil:
+                <select name="estadoCivil">
+                    <option value="" selected disabled hidden></option>
+                    <option value="casado">Casado(a)</option>
+                    <option value="solteiro">Solteiro(a)</option>
+                    <option value="Divorciado">Divorciado(A)</option>
+                    <option value="Viuvo">Viuvo(a)</option>
+                </select>
+                <br> <br>
+                Sexo: <br>
+                <input type="radio" name="sexo" value="masculino"> Masculino
+                <input type="radio" name="sexo" value="feminino"> Feminino
+                <br> <br> 
+                <fieldset id="AgendamentoConsulta">
+                    <legend>Agendamento da Consulta</legend>
+                    <br>
+                Data do agendamento:
+                <input type="date" name="dataAgendamento">
+                <br> <br>
+                Horário da consulta:
+                <input type="time" name="horarioAgendamento">
+                <br> <br>
+                Possui alguma doença crônica?
+                <br>
+                <input type="radio" name="doenca" value="sim"> Sim
+                <br>
+                <input type="radio" name="doenca" value="nao"> Não
+                <br> <br>
+                Foto da carteirinha:
+                <input type="file" name="fotoCarteirinha">
+                <br> <br>
+                Foto do RG:
+                <input type="file" name="fotoRG">
+                <br> <br>
+                Número da carteirinha:
+                <input placeholder="123456789" type="number" name="carteirinha">
+                <br> <br>
+                <label for="descricao">Descrição da situação médica:</label>
+                <textarea placeholder="Situação do paciente" name="descricao" id="" cols="40" rows="6"></textarea>
+                <br>
+                <input type="submit" value="Enviar"/>
+                <input type="reset" value="Limpar">
+                </fieldset>
+
+        </form>
+    </body>
+</html>
